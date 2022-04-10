@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>{{ post.title }}</h1>
+  <h2>Pulled by: {{post.diviner.username}}</h2>
+  <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
+  <h4>{{post.spread}}</h4>
+  <p>{{post.card1}}</p>
+  <p>{{post.card2}}</p>
+  <p>{{post.card3}}</p>
+  <p>{{post.reflection}}</p>
+  {% if post.diviner == current_user %}
+    <div>
+      <a class="btn btn-secondary" href="{{ url_for('tarot_posts.update', tarot_post_id=post.id) }}">Update</a>
+      <br>
+      <form action="{{ url_for('tarot_posts.delete_post', tarot_post_id=post.id) }}" method="POST">
+        <input class="btn btn-danger" type="submit" value="Delete">
+      </form>
+    </div>
+  {% endif %}
+</div>
+{% endblock content %}
