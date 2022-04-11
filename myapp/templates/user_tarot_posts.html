@@ -3,21 +3,22 @@
     <div class="container">
         <div class="jumbotron">
             <div align="center">
-                <h1>Welcome to the page for {{user.username}}</h1>
+                <h1>{{user.username}}'s spreads</h1>
             </div>
         </div>
     {% for post in tarot_posts.items %}
-    <h2>
-        <a href="{{url_for('tarot_posts.tarot_post', tarot_post_id=post.id)}}">{{post.title}}</a>
-    </h2>
-    Written By: <a href="{{url_for('users.user_posts', username=post.diviner.username)}}">{{post.diviner.username}}</a>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{url_for('static', filename='tarotcard.png')}}" alt="Card image cap">
+      <h4 class="card-title"> {{post.spread}} </h4>
+      <h5 class="card-title">Querent: {{post.title}} </h5>
+      <ul id="cardsPulled" class="list-group">
+      <li class="list-group-item">{{post.card1}}</li>
+      <li id="middle" class="list-group-item">{{post.card2}}</li>
+      <li class="list-group-item">{{post.card3}}</li>
+      <a class="btn card-link" id="readBtn" href="{{url_for('tarot_posts.tarot_post', tarot_post_id=post.id)}}">Read</a>
+      </ul>
 
-    <p class="text-muted">
-        Published On: {{post.date.strftime("%y-%m-%d")}}
-    </p>
-    <br>
-    <p>{{post.reflection}}</p>
-    <br>
+  </div>
     {% endfor %}
     </div>
 

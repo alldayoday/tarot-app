@@ -1,0 +1,86 @@
+body{
+  text-align: center;
+  background-color: #3f3867;
+  color: #fca332;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+  font-family: 'Playfair Display', serif;
+}
+
+.nav-link{
+  font-family: 'Playfair Display', serif;
+  color: #a6b6f8;
+}
+
+#nav{
+  background-color: #031339;
+}
+
+#navCard{
+  width: 80px;
+}
+
+.card{
+background-color: #a6b6f8;
+border-radius: 10px;
+color: #041f60;
+border: 2px solid #fca332;
+font-family: 'Playfair Display', serif;
+}
+
+.list-group-item{
+  background-color: #fca332;
+  border-radius: 5px;
+  margin: 4px 10px;
+}
+
+#cardsPulled{
+  border: none;
+}
+
+#middle{
+  background-color: #041f60;
+  color: #fca332;
+}
+
+#readBtn{
+background-color: #041f60;
+color: #fca332;
+width: 80px;
+align-self: center;
+margin: 5px;
+border: 2px solid #fca332;
+border-radius: 10px;
+}
+
+.form-group{
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+#submitSpread{
+  width: 80px;
+  background-color: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#postSpread{
+  text-align: left;
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+TextArea{
+  height: 200px;
+}
+
+#pageNo{
+  background-color: #fca332;
+  color: #041f60;
+  border: 2px solid #041f60;
+  margin-top: 50px;
+}

@@ -2,7 +2,8 @@
 {% block content %}
 <div class="jumbotron">
   <h1>{{ post.title }}</h1>
-  <h2>Pulled by: {{post.diviner.username}}</h2>
+  <a href="{{url_for('users.user_posts', username=post.diviner.username)}}">Interpreted by:
+    {{post.diviner.username}}</a>
   <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
   <h4>{{post.spread}}</h4>
   <p>{{post.card1}}</p>

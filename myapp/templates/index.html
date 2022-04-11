@@ -1,36 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="jumbotron">
-        <h1>Tarot Readings</h1>
-    </div>
-    <div class="container">
-        {% for post in tarot_posts.items %}
-            <div class="card">
-                <div class="car-boy">
-                    <h2>
-                        <a class="card-title" href="{{url_for('tarot_posts.tarot_post', tarot_post_id=post.id)}}">{{post.title}}</a>
-                        <a href="{{url_for('users.user_posts', username=post.diviner.username)}}">Pulled by: {{post.diviner.username}}</a>
-                    </h2>
-                    <p>Published on: {{post.date.strftime('%Y - %m - %d')}}</p>
-                    <a class="btn btn-primary" href="{{url_for('tarot_posts.tarot_post', tarot_post_id=post.id)}}">Read Tarot</a>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-
-    <nav aria-label="Page Navigation example">
-        <ul class="pagination justify-content-center">
-            {% for page_num in tarot_posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
-                {% if tarot_posts.page == page_num %}
-                <li class="page-item disabled">
-                    <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
-                </li>
-                {% else %}
-                <li class="page-item">
-                    <a class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
-                </li>
-                {% endif %}
-            {% endfor %}
+<h1>Tarot Readings By Date</h1>
+<div class="container">
+    {% for post in tarot_posts.items %}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{url_for('static', filename='tarotcard.png')}}" alt="Card image cap">
+        <h4 class="card-title"> {{post.spread}} </h4>
+        <h5 class="card-title">Querent: {{post.title}} </h5>
+        <ul id="cardsPulled" class="list-group">
+        <li class="list-group-item">{{post.card1}}</li>
+        <li id="middle" class="list-group-item">{{post.card2}}</li>
+        <li class="list-group-item">{{post.card3}}</li>
+        <a class="btn card-link" id="readBtn" href="{{url_for('tarot_posts.tarot_post', tarot_post_id=post.id)}}">Read</a>
         </ul>
-    </nav>
+
+    </div>
+    {% endfor %}
+</div>
+
+<nav aria-label="Page Navigation example">
+    <ul class="pagination justify-content-center">
+        {% for page_num in tarot_posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+        {% if tarot_posts.page == page_num %}
+        <li class="page-item disabled">
+            <a id="pageNo" class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
+        </li>
+        {% else %}
+        <li class="page-item">
+            <a id="pageNo" class="page-link" href="{{url_for('core.index', page=page_num)}}">{{ page_num }}</a>
+        </li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</nav>
 {% endblock %}
