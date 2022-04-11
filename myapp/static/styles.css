@@ -84,5 +84,15 @@ TextArea{
 
 a{
   text-decoration: none;
-  color: #a6b6f8;
+  color: #3f3867;
+}
+
+.tarotCards{
+  width: 100px;
+  margin: 5px;
+}
+
+#readPost{
+  margin: 50px;
+  padding: 10px;
 }

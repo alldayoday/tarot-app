@@ -1,23 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="jumbotron">
+<div id="readPost" class="card">
   <h1>{{ post.title }}</h1>
   <a href="{{url_for('users.user_posts', username=post.diviner.username)}}">Interpreted by:
     {{post.diviner.username}}</a>
   <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
   <h4>{{post.spread}}</h4>
-  <p>{{post.card1}}</p>
-  <p>{{post.card2}}</p>
-  <p>{{post.card3}}</p>
+  <div id="readSpread">
+    <img class="tarotCards" src="{{url_for('static', filename='1.png')}}" alt="tarot">
+
+    <img class="tarotCards" src="{{url_for('static', filename='2.png')}}" alt="tarot">
+    <img class="tarotCards" src="{{url_for('static', filename='3.png')}}" alt="tarot">
+    <div id="readSpread">
+    <p>{{post.card1}}</p>
+     <p> {{post.card2}}</p>
+      <p> {{post.card3}}</p>
+    </div>
+  </div>
   <p>{{post.reflection}}</p>
   {% if post.diviner == current_user %}
-    <div>
-      <a class="btn btn-secondary" href="{{ url_for('tarot_posts.update', tarot_post_id=post.id) }}">Update</a>
-      <br>
-      <form action="{{ url_for('tarot_posts.delete_post', tarot_post_id=post.id) }}" method="POST">
-        <input class="btn btn-danger" type="submit" value="Delete">
-      </form>
-    </div>
+  <div>
+    <a class="btn btn-secondary" href="{{ url_for('tarot_posts.update', tarot_post_id=post.id) }}">Update</a>
+    <br>
+    <form action="{{ url_for('tarot_posts.delete_post', tarot_post_id=post.id) }}" method="POST">
+      <input class="btn btn-danger" type="submit" value="Delete">
+    </form>
+  </div>
   {% endif %}
 </div>
 {% endblock content %}
