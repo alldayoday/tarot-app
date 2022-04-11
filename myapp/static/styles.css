@@ -84,3 +84,7 @@ TextArea{
   border: 2px solid #041f60;
   margin-top: 50px;
 }
+
+.card{
+  margin: 8px;
+}

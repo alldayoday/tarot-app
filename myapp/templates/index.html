@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Tarot Readings By Date</h1>
-<div class="container">
+
+<div class="container row" >
     {% for post in tarot_posts.items %}
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="{{url_for('static', filename='tarotcard.png')}}" alt="Card image cap">

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="container">
+    <div class="container row">
         <div class="jumbotron">
             <div align="center">
                 <h1>{{user.username}}'s spreads</h1>
@@ -28,11 +28,11 @@
             {% for page_num in tarot_posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
                 {% if tarot_posts.page == page_num %}
                 <li class="page-item disabled">
-                    <a class="page-link" href="{{url_for('users.user_posts', username=user.username, page=page_num)}}">{{ page_num }}</a>
+                    <a id="pageNo" class="page-link" href="{{url_for('users.user_posts', username=user.username, page=page_num)}}">{{ page_num }}</a>
                 </li>
                 {% else %}
                 <li class="page-item">
-                    <a class="page-link" href="{{url_for('users.user_posts', username=user.username, page=page_num)}}">{{ page_num }}</a>
+                    <a id="pageNo" class="page-link" href="{{url_for('users.user_posts', username=user.username, page=page_num)}}">{{ page_num }}</a>
                 </li>
                 {% endif %}
             {% endfor %}
