@@ -61,13 +61,6 @@ border-radius: 10px;
   margin-top: 20px;
 }
 
-#submitSpread{
-  width: 80px;
-  background-color: none;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
 #postSpread{
   text-align: left;
   font-size: 1.2rem;
@@ -87,4 +80,9 @@ TextArea{
 
 .card{
   margin: 8px;
+}
+
+a{
+  text-decoration: none;
+  color: #a6b6f8;
 }
