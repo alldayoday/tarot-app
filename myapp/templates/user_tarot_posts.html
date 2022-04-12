@@ -8,14 +8,14 @@
         </div>
     {% for post in tarot_posts.items %}
     <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="{{url_for('static', filename='tarotcard.png')}}" alt="Card image cap">
+      <img class="card-img-top" src="{{url_for('static', filename='card.png')}}" alt="Card image cap">
       <h4 class="card-title"> {{post.spread}} </h4>
-      <h5 class="card-title">Querent: {{post.title}} </h5>
+      <h5>{{post.title}} </h5>
       <ul id="cardsPulled" class="list-group">
       <li class="list-group-item">{{post.card1}}</li>
       <li id="middle" class="list-group-item">{{post.card2}}</li>
       <li class="list-group-item">{{post.card3}}</li>
-      <a class="btn card-link" id="readBtn" href="{{url_for('tarot_posts.tarot_post', tarot_post_id=post.id)}}">Read</a>
+      <a class="btn card-link" id="readBtn" href="{{url_for('tarot_posts.tarot_post', tarot_post_id=post.id)}}">Reflection</a>
       </ul>
 
   </div>

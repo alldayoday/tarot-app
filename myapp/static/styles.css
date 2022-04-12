@@ -1,39 +1,50 @@
 body{
   text-align: center;
-  background-color: #3f3867;
-  color: #fca332;
-  font-family: 'Open Sans', sans-serif;
+  background-color: #181528;
+  color: #936f2b;
+  font-family: 'Playfair Display', serif;
 }
 
 h1{
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lobster', cursive;
+margin-top: 20px;
+}
+
+h4{
+  font-family: 'Lobster', cursive;
 }
 
 .nav-link{
   font-family: 'Playfair Display', serif;
-  color: #a6b6f8;
+  color: #181528;
+}
+
+.nav-link:hover{
+  color: #aea0fa;
 }
 
 #nav{
-  background-color: #031339;
+  background-color: #936f2b;
 }
 
 #navCard{
-  width: 80px;
+  width: 50px;
 }
 
 .card{
-background-color: #a6b6f8;
-border-radius: 10px;
-color: #041f60;
-border: 2px solid #fca332;
+background-color: #181528;
+border-radius: 2px;
+color: #936f2b;
+border: 2px solid #936f2b;
 font-family: 'Playfair Display', serif;
+padding: 5px;
 }
 
 .list-group-item{
-  background-color: #fca332;
+  background-color: #936f2b;
   border-radius: 5px;
   margin: 4px 10px;
+  color: #181528;
 }
 
 #cardsPulled{
@@ -41,18 +52,17 @@ font-family: 'Playfair Display', serif;
 }
 
 #middle{
-  background-color: #041f60;
-  color: #fca332;
+  background-color: #69418b;
 }
 
 #readBtn{
-background-color: #041f60;
-color: #fca332;
-width: 80px;
+background-color: transparent;
+color: #936f2b;
+width: fit-content;
 align-self: center;
 margin: 5px;
-border: 2px solid #fca332;
-border-radius: 10px;
+border: 2px solid #936f2b;
+border-radius: 2px;
 }
 
 .form-group{
@@ -67,14 +77,16 @@ border-radius: 10px;
   font-family: 'Playfair Display', serif;
 }
 
+
+
 TextArea{
   height: 200px;
 }
 
 #pageNo{
-  background-color: #fca332;
-  color: #041f60;
-  border: 2px solid #041f60;
+  background-color: #936f2b;
+  color: #181528;
+  border: none;
   margin-top: 50px;
 }
 
@@ -84,15 +96,53 @@ TextArea{
 
 a{
   text-decoration: none;
-  color: #3f3867;
+  color: #6a5eab;
 }
 
-.tarotCards{
-  width: 100px;
-  margin: 5px;
+a:hover{
+  color: #aea0fa;
 }
+
 
 #readPost{
   margin: 50px;
   padding: 10px;
+}
+
+#readSpread{
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.card-title{
+  font-family: 'Lobster', cursive;
+  margin: 3px;
+}
+
+.tarotCards{
+  width: 50%;
+}
+
+table{
+  margin-left: 30%;
+}
+
+#update{
+  width: fit-content;
+  background-color: #936f2b;
+  border: none;
+  margin: 20px;
+
+}
+
+#delete{
+  background-color: rgb(95, 5, 5);
+  border: 2px solid rgb(95, 5, 5);
+  margin: 20px;
+  width: fit-content;
+  color: antiquewhite;
+}
+
+#cardBtns{
+  display: inline-flex;
 }
