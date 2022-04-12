@@ -1,8 +1,10 @@
 body{
   text-align: center;
-  background-color: #181528;
+  /* background-color: #181528; */
   color: #936f2b;
   font-family: 'Playfair Display', serif;
+  background-color: #181528;
+  background-image: url('https://i.imgur.com/OliWaJf.png');
 }
 
 h1{
@@ -10,7 +12,7 @@ h1{
 margin-top: 20px;
 }
 
-h4{
+h4, h3{
   font-family: 'Lobster', cursive;
 }
 
@@ -35,9 +37,15 @@ h4{
 background-color: #181528;
 border-radius: 2px;
 color: #936f2b;
-border: 2px solid #936f2b;
+border: 5px double #936f2b;
 font-family: 'Playfair Display', serif;
 padding: 5px;
+margin: 10px;
+}
+
+.container{
+  margin: auto;
+  
 }
 
 .list-group-item{
@@ -90,9 +98,7 @@ TextArea{
   margin-top: 50px;
 }
 
-.card{
-  margin: 8px;
-}
+
 
 a{
   text-decoration: none;

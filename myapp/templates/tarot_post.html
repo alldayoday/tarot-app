@@ -2,11 +2,6 @@
 {% block content %}
 <div id="readPost" class="card">
   <h1>Quorent - {{ post.title }}</h1>
-  <h2>
-  <a href="{{url_for('users.user_posts', username=post.diviner.username)}}">Diviner:
-    {{post.diviner.username}}</a>
-  </h2>
-  <h6>Recorded: {{ post.date.strftime('%B %d, %Y') }}</h6>
   <h5>Spread:</h5>
   <h4>{{post.spread}}</h4>
   <div id="readSpread">
@@ -42,6 +37,11 @@
   </div>
   <h4>Reflection</h4>
   <p>{{post.reflection}}</p>
+  <h6>Recorded: {{ post.date.strftime('%B %d, %Y') }}</h6>
+  <h3>
+    <a href="{{url_for('users.user_posts', username=post.diviner.username)}}">Diviner:
+      {{post.diviner.username}}</a>
+    </h3>
   {% if post.diviner == current_user %}
   <div id="cardBtns">
     <a id="update" class="btn" href="{{ url_for('tarot_posts.update', tarot_post_id=post.id) }}">Update</a>
