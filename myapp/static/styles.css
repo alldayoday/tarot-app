@@ -152,3 +152,8 @@ table{
 #cardBtns{
   display: inline-flex;
 }
+
+.postBtn{
+  background-color: #6a5eab;
+  color:#181528;
+}

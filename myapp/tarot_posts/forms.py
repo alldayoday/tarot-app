@@ -9,4 +9,4 @@ class TarotPostForm(FlaskForm):
     card2 = StringField('Second Card', validators=[DataRequired()])
     card3 = StringField('Third Card', validators=[DataRequired()])
     reflection = TextAreaField('Reflection', validators=[DataRequired()])
-    submit = SubmitField('Post')
+    submit = SubmitField('Save')
