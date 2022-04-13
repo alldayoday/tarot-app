@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="jumbotron">
-        <h1>Oops! Page Not Found 404 ! </h1>
-        <h2>Get out of here!</h2>
-    </div>
+    <body class="error">
+        <img class="errorPage" src="{{url_for('static', filename='404.gif')}}" alt="404 page not found">
+    </body>
 {% endblock %}

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="jumbotron">
-        <h1>Oops! 403 Forbidden  ! </h1>
-    </div>
+<body class="error">
+    <img class="errorPage" src="{{url_for('static', filename='403.gif')}}" alt="403 not authorized">
+</body>
 {% endblock %}

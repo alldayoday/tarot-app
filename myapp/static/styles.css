@@ -162,3 +162,12 @@ table{
   background-color: #6a5eab;
   color:#181528;
 }
+
+.errorPage{
+  width: 100%;
+  margin: 0;
+}
+
+.error{
+  background-image: none;
+}
