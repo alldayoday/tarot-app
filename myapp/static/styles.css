@@ -131,7 +131,7 @@ a:hover{
 }
 
 .tarotCards{
-  width: 50%;
+  width: 80%;
 }
 
 table{
@@ -171,4 +171,11 @@ table{
 .error{
   background-image: none;
   background-color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .tarotCards{
+  height: 0;
+  width: 0;
+}
 }
