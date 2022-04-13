@@ -4,8 +4,13 @@ body{
   color: #936f2b;
   font-family: 'Playfair Display', serif;
   background-color: #181528;
-  background-image: url('https://i.imgur.com/OliWaJf.png');
+  background-image: url('/static/overlay.png');
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+
 
 h1{
   font-family: 'Lobster', cursive;
