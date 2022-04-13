@@ -1,4 +1,4 @@
-body{
+body {
   text-align: center;
   /* background-color: #181528; */
   color: #936f2b;
@@ -12,79 +12,80 @@ body{
 
 
 
-h1{
+h1 {
   font-family: 'Lobster', cursive;
-margin-top: 20px;
+  margin-top: 20px;
 }
 
-h4, h3{
+h4,
+h3 {
   font-family: 'Lobster', cursive;
 }
 
-.nav-link{
+.nav-link {
   font-family: 'Playfair Display', serif;
   color: #181528;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: #aea0fa;
 }
 
-#nav{
+#nav {
   background-color: #936f2b;
 }
 
-#navCard{
+#navCard {
   width: 50px;
 }
 
-.card{
-background-color: #181528;
-border-radius: 2px;
-color: #936f2b;
-border: 5px double #936f2b;
-font-family: 'Playfair Display', serif;
-padding: 5px;
-margin: 10px;
+.card {
+  background-color: #181528;
+  border-radius: 2px;
+  color: #936f2b;
+  border: 5px double #936f2b;
+  font-family: 'Playfair Display', serif;
+  padding: 5px;
+  margin: 10px;
 }
 
-.container{
+.container {
   margin: auto;
-  
+
 }
 
-.list-group-item{
+.list-group-item {
   background-color: #936f2b;
   border-radius: 5px;
   margin: 4px 10px;
   color: #181528;
 }
 
-#cardsPulled{
+#cardsPulled {
   border: none;
 }
 
-#middle{
+#middle {
   background-color: #69418b;
 }
 
-#readBtn{
-background-color: transparent;
-color: #936f2b;
-width: fit-content;
-align-self: center;
-margin: 5px;
-border: 2px solid #936f2b;
-border-radius: 2px;
+#readBtn {
+  background-color: transparent;
+  color: #936f2b;
+  width: fit-content;
+  align-self: center;
+  margin: 5px;
+  border: 2px solid #936f2b;
+  border-radius: 2px;
 }
 
-.form-group{
+.form-group {
   width: 80%;
   margin-left: 10%;
   margin-top: 20px;
 }
 
-#postSpread{
+#postSpread {
   text-align: left;
   font-size: 1.2rem;
   font-family: 'Playfair Display', serif;
@@ -92,11 +93,11 @@ border-radius: 2px;
 
 
 
-TextArea{
+TextArea {
   height: 200px;
 }
 
-#pageNo{
+#pageNo {
   background-color: #936f2b;
   color: #181528;
   border: none;
@@ -105,40 +106,40 @@ TextArea{
 
 
 
-a{
+a {
   text-decoration: none;
   color: #6a5eab;
 }
 
-a:hover{
+a:hover {
   color: #aea0fa;
 }
 
 
-#readPost{
+#readPost {
   margin: 50px;
   padding: 10px;
 }
 
-#readSpread{
+#readSpread {
   width: 80%;
   margin-bottom: 30px;
 }
 
-.card-title{
+.card-title {
   font-family: 'Lobster', cursive;
   margin: 3px;
 }
 
-.tarotCards{
+.tarotCards {
   width: 80%;
 }
 
-table{
+table {
   margin-left: 30%;
 }
 
-#update{
+#update {
   width: fit-content;
   background-color: #936f2b;
   border: none;
@@ -146,7 +147,7 @@ table{
 
 }
 
-#delete{
+#delete {
   background-color: rgb(95, 5, 5);
   border: 2px solid rgb(95, 5, 5);
   margin: 20px;
@@ -154,28 +155,28 @@ table{
   color: antiquewhite;
 }
 
-#cardBtns{
+#cardBtns {
   display: inline-flex;
 }
 
-.postBtn{
+.postBtn {
   background-color: #6a5eab;
-  color:#181528;
+  color: #181528;
 }
 
-.errorPage{
+.errorPage {
   width: 100%;
   margin: 0;
 }
 
-.error{
+.error {
   background-image: none;
   background-color: black;
 }
 
 @media screen and (max-width: 600px) {
-  .tarotCards{
-  height: 0;
-  width: 0;
-}
+  .tarotCards {
+    height: 0;
+    width: 0;
+  }
 }

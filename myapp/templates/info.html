@@ -1,21 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="jumbotron">
-        <h1>The Oracle's Arcana</h1>
-        <h5>Welcome, Initiant!</h5>
-        <p>
-            The Oracle's Arcana is a tool for tracking your own journey in reading and learning Tarot, as well as finding spreads that fit where you are in life. Use this as a tool to track your own readings or be the querent of someone else's spread. This journal is built to track three card spreads, the most common number of cards pulled from the Rider Waite Tarot. However, if you would like to include more than three cards, you are able to include more within your reflection.
-        </p>
-        <h5>
-            What is Tarot?
-        </h5>
-        <p>
-            The Rider Waite Tarot consists of 78 cards with unique symbolism that each tell their own story. There are two parts to a deck: The Major Arcana and The Minor Arcana. Some of these cards represent personality characteristics, while some represent situations one may encounter. Some of the cards have suits, and some do not. It is believed that one can consult these cards to reveal truths about the lives and intentions of themselves and others.
-        </p>
-        <h5>
-            <a href="https://www.tarot.com/tarot/about-tarot">Would you like to learn more?</a>
-        </h5>
-        <img src="{{url_for('static', filename='logo.png')}}" alt="Card image cap">
-    </div>
+<div class="jumbotron">
+    <h1>The Oracle's Arcana</h1>
+    <h5>Welcome, Initiant!</h5>
+    <p>
+        The Oracle's Arcana is a tool for tracking your own journey in reading and learning Tarot, as well as finding
+        spreads that fit where you are in life. Use this as a tool to track your own readings or be the querent of
+        someone else's spread. This journal is built to track three card spreads, the most common number of cards pulled
+        from the Rider Waite Tarot. However, if you would like to include more than three cards, you are able to include
+        more within your reflection.
+    </p>
+    <h5>
+        What is Tarot?
+    </h5>
+    <p>
+        The Rider Waite Tarot consists of 78 cards with unique symbolism that each tell their own story. There are two
+        parts to a deck: The Major Arcana and The Minor Arcana. Some of these cards represent personality
+        characteristics, while some represent situations one may encounter. Some of the cards have suits, and some do
+        not. It is believed that one can consult these cards to reveal truths about the lives and intentions of
+        themselves and others.
+    </p>
+    <h5>
+        <a href="https://www.tarot.com/tarot/about-tarot">Would you like to learn more?</a>
+    </h5>
+    <img src="{{url_for('static', filename='logo.png')}}" alt="Card image cap">
+</div>
 
 {% endblock %}

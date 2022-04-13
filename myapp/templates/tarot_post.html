@@ -10,30 +10,30 @@
       <table>
         <thead>
           <tr>
-    <th>First</th>
-    <th>Second</th>
-    <th>Third</th>
-  </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-      <img class="tarotCards" src="{{url_for('static', filename='1.png')}}" alt="tarot">
-    </td>
-    <td>
-      <img class="tarotCards" src="{{url_for('static', filename='2.png')}}" alt="tarot">
-    </td>
-    <td>
-      <img class="tarotCards" src="{{url_for('static', filename='3.png')}}" alt="tarot">
-    </td>
-    </tr>
-  <tr>
-    <td>{{post.card1}}</td>
-    <td>{{post.card2}}</td>
-    <td>{{post.card3}}</td>
-  </tr>
-  </tbody>
-  </table>
+            <th>First</th>
+            <th>Second</th>
+            <th>Third</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img class="tarotCards" src="{{url_for('static', filename='1.png')}}" alt="tarot">
+            </td>
+            <td>
+              <img class="tarotCards" src="{{url_for('static', filename='2.png')}}" alt="tarot">
+            </td>
+            <td>
+              <img class="tarotCards" src="{{url_for('static', filename='3.png')}}" alt="tarot">
+            </td>
+          </tr>
+          <tr>
+            <td>{{post.card1}}</td>
+            <td>{{post.card2}}</td>
+            <td>{{post.card3}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
   <h4>Reflection</h4>
@@ -42,7 +42,7 @@
   <h3>
     <a href="{{url_for('users.user_posts', username=post.diviner.username)}}">Diviner:
       {{post.diviner.username}}</a>
-    </h3>
+  </h3>
   {% if post.diviner == current_user %}
   <div id="cardBtns">
     <a id="update" class="btn" href="{{ url_for('tarot_posts.update', tarot_post_id=post.id) }}">Update</a>
