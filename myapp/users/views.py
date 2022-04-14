@@ -74,5 +74,5 @@ def account():
 def user_posts(username):
     page = request.args.get('page', 1, type=int)
     user = User.query.filter_by(username=username).first_or_404()
-    tarot_posts = TarotPost.query.filter_by(diviner=user).order_by(TarotPost.date.desc()).paginate(page=page, per_page=5) 
+    tarot_posts = TarotPost.query.filter_by(diviner=user).order_by(TarotPost.date.desc()).paginate(page=page, per_page=4) 
     return render_template('user_tarot_posts.html', tarot_posts=tarot_posts, user=user)
