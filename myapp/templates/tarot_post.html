@@ -43,13 +43,11 @@
     <a href="{{url_for('users.user_posts', username=post.diviner.username)}}">Diviner:
       {{post.diviner.username}}</a>
   </h3>
-  <!-- {% if post.diviner == current_user%} -->
   <div id="cardBtns">
     <a id="update" class="btn" href="{{ url_for('tarot_posts.update', tarot_post_id=post.id) }}">Update</a>
     <form action="{{ url_for('tarot_posts.delete_post', tarot_post_id=post.id) }}" method="POST">
       <input id="delete" class="btn btn-danger" type="submit" value="Delete">
     </form>
   </div>
-  <!-- {% endif %} -->
 </div>
 {% endblock content %}
