@@ -67,8 +67,8 @@ def update(tarot_post_id):
 def delete_post(tarot_post_id):
 
     tarot_post = TarotPost.query.get_or_404(tarot_post_id)
-    # if tarot_post.diviner != current_user:
-    #     abort(403)
+    if tarot_post.diviner != current_user:
+        abort(403)
 
     db.session.delete(tarot_post)
     db.session.commit()
